@@ -34,15 +34,13 @@ GLOBAL OPTIONS:
    --table-name value, -t value                                          [import export] target dynamo db tabe name (required)
    --endpoint value, -e value                                            [import export] endpoint of DynamoDB
    --profile value, -p value                                             [import export] profile of aws cli
-   --output value, -o value                                              [import export] target output (default: stdout, e.g. ./out.txt), no file will be created if execute option is enabled
-   --csv value, -c value, --file value, -f value                         [import] file to import e.g. ./tablename.csv
+   --output value, --out value, -o value                                 [import export] target output (default: stdout, e.g. ./out.txt), no file will be created if execute option is enabled
+   --csv value, -c value, --file value, -f value                         [import] file to import (e.g. ./tablename.csv)
    --execute                                                             [import] is directly execute import command (default: false)
-   --filter-expression value, --fex value                                [export] DynamoDB Column names order for using csv output
+   --filter-expression value, --fex value                                [export] filter-expression to export (e.g. 'contains(#ts, :s)')
    --expression-attribute-values value, --exp-values value, --xav value  [export] expression-attribute-values to export (e.g. '{":s":{"S":"15:00:00Z"}}')
    --expression-attribute-names value, --exp-names value, --xan value    [export] expression-attribute-names to export (e.g. '{"#ts":"timestamp"}')
    --help, -h                                                            show help (default: false)
-2021/03/30 15:00:19 Required flag "table-name" not set
-exit status 1
 ```
 
 # example
