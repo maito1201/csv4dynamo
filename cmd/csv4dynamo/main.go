@@ -31,7 +31,7 @@ func main() {
 			},
 			&cli.StringFlag{
 				Name:    "output",
-				Aliases: []string{"o"},
+				Aliases: []string{"out", "o"},
 				Usage:   "[import export] target output (default: stdout, e.g. ./out.txt), no file will be created if execute option is enabled",
 			},
 			&cli.StringFlag{

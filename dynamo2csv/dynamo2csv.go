@@ -40,8 +40,8 @@ func Export(c *cli.Context) error {
 	}
 
 	w := csv.NewWriter(os.Stdout)
-	if c.String("out") != "" {
-		f, err := os.OpenFile(c.String("out"), os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	if c.String("output") != "" {
+		f, err := os.OpenFile(c.String("output"), os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 		if err != nil {
 			return err
 		}
