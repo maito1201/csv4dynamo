@@ -40,6 +40,7 @@ func Export(c *cli.Context) error {
 	}
 
 	w := csv.NewWriter(os.Stdout)
+	defer w.Flush()
 	if c.String("output") != "" {
 		f, err := os.OpenFile(c.String("output"), os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 		if err != nil {
@@ -47,7 +48,6 @@ func Export(c *cli.Context) error {
 		}
 		defer f.Close()
 		w = csv.NewWriter(f)
-	} else {
 		defer w.Flush()
 	}
 
