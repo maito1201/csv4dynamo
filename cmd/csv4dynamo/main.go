@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/maito1201/csv4dynamo/csv2dynamo"
+	"github.com/maito1201/csv2dynamo"
 	"github.com/maito1201/csv4dynamo/dynamo2csv"
 	"github.com/urfave/cli/v2"
 	"log"
